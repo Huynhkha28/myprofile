@@ -131,7 +131,7 @@ export default function Home() {
                     <p className='mt-2 text-sm sm:text-lg'>Technology:</p>
                     <p className='text-start text-sm sm:text-base pl-2'>Front-end: HTML,TailwindCSS, ReactJS, TS</p>
                     <p className='text-start text-sm sm:text-base pl-2'>Back-end: None </p>
-                    <p className='text-start text-sm sm:text-base pl-2'>Link:</p>
+                    <p className='text-start text-sm sm:text-base pl-2'>Link:<Link href="https://github.com/Huynhkha28/project_fordev">https://github.com/Huynhkha28/myprofile</Link></p>
                 </li>
              </ul>
           </div>
