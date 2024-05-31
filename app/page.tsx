@@ -10,6 +10,12 @@ export default function Home() {
   const [openMenu, setOpenMenu]= useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [colorNavbar, setColorNavbar] =useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 700); // Đặt về true nếu như kích thước màn hình <600
+    };
+    window.addEventListener('resize', handleResize); // Gọi hàm handleResize khi cửa sổ được điều chỉnh kích thước
   const changeColor = ()=>{
     if(window.scrollY >80)
     {
@@ -20,12 +26,6 @@ export default function Home() {
     }
   }
   window.addEventListener("scroll", changeColor)
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 700); // Đặt về true nếu như kích thước màn hình <600
-    };
-    window.addEventListener('resize', handleResize); // Gọi hàm handleResize khi cửa sổ được điều chỉnh kích thước
-
     // Gỡ bỏ event listener khi component bị unmount
     return () => {
       window.removeEventListener('resize', handleResize);
